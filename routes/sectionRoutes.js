@@ -1,3 +1,4 @@
+
 const express = require("express");
 const router = express.Router();
 
@@ -14,10 +15,10 @@ const {
 /* CREATE */
 router.post("/", createSection);
 
-/* 🔥 ALL SECTIONS FIRST */
+/* GET ALL */
 router.get("/", getAllSections);
 
-/* DRAG */
+/* REORDER */
 router.put("/reorder/all", reorderSections);
 
 /* MOVE */
@@ -29,7 +30,7 @@ router.put("/:id", updateSection);
 /* DELETE */
 router.delete("/:id", deleteSection);
 
-/* GET BY COURSE (LAST) */
+/* GET BY COURSE */
 router.get("/:courseId", getSections);
 
 module.exports = router;
